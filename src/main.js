@@ -2,25 +2,27 @@ import { chars, charsData } from "./characters";
 
 // Targetting Elements
 const gameGrid = document.querySelector(".game-grid");
+const points = document.querySelector(".points");
 
 // Game Variables
+const gridSize = 6;
 const virtualGrid = [];
+let score = 0;
 
 function getRandChar() {
   return chars[Math.floor(Math.random() * chars.length)];
 }
 
 function buildGrid() {
-  for (let i of Array(36).fill(1)) {
-    // Creating box and image elements
+  for (let i = 0; i < gridSize * gridSize; i++) {
+    // Creating box and setting attributes
     const box = document.createElement("div");
-    const img = document.createElement("img");
-    img.src = charsData[getRandChar()];
+    box.classList.add("box"); // Add box class
+    box.setAttribute("draggable", true); // Make it draggable
+    box.setAttribute("id", i); // Add id for calculation
+    box.backgroundImage = charsData[getRandChar()]; // Set random background image
 
-    // Adding image inside the box
-    box.appendChild(img);
     // Adding the box in grid
-    box.classList.add("box");
     gameGrid.appendChild(box);
   }
 }
