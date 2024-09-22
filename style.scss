@@ -11,6 +11,9 @@ main {
   width: 100vw;
   display: grid;
   place-items: center;
+
+  // Background
+  background: linear-gradient(-225deg, #e3fdf5 0%, #ffe6fa 100%);
 }
 
 // Grid of 6x6 of 70px each
