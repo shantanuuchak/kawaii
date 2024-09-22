@@ -6,6 +6,31 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: "Inter", sans-serif;
+main {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+}
+
+// Grid of 6x6 of 70px each
+.game-grid {
+  height: calc(6 * 70px);
+  aspect-ratio: 1/1;
+  display: grid;
+  grid-template-columns: repeat(6, 70px);
+  grid-template-rows: repeat(6, 70px);
+}
+
+.box {
+  background: purple;
+  border: 1px solid black;
+}
+
+.box:nth-child(3n) {
+  background: red;
+}
+
+.box:nth-child(2n) {
+  background: orange;
 }
