@@ -26,6 +26,10 @@ main {
 
 // Grid of 6x6 of 70px each
 .game-grid {
+  box-sizing: content-box;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background: #33333332;
   height: calc(6 * 70px);
   aspect-ratio: 1/1;
   display: grid;
@@ -34,7 +38,6 @@ main {
   gap: 1px;
 
   .box {
-    background: rgba(255, 255, 238, 0.574);
     display: grid;
     place-items: center;
     border-radius: 0.5rem;
@@ -42,6 +45,9 @@ main {
     img {
       height: 100%;
       width: 100%;
+
+      // Add glowing effect
+      filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.34));
     }
   }
 }
