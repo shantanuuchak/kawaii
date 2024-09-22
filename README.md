@@ -1,3 +1,3 @@
 # Kawaii
 
-Icon Set Used: [text](https://icons8.com/icons/set/kawaii-food)
+Icon Set Used: [link](https://icons8.com/icon/set/food/color)
