@@ -20,7 +20,7 @@ function buildGrid() {
     box.classList.add("box"); // Add box class
     box.setAttribute("draggable", true); // Make it draggable
     box.setAttribute("id", i); // Add id for calculation
-    box.backgroundImage = charsData[getRandChar()]; // Set random background image
+    box.style.backgroundImage = ""; // Set random background image
 
     // Adding the box in grid
     gameGrid.appendChild(box);
